@@ -3,14 +3,17 @@ package ru.netology.sqr;
 public class SQRService {
 
 
-    public int numderOfSqr(int lowLimit, int upLimit, int initialValue) {
+    public int countinQuantitySqr(int lowLimit, int upLimit) {
+
+        int quantityRoots = 0;
 
         for (int i = 10; i < 100; i++) {
-            if (i * i <= upLimit && i * i >= lowLimit) {
-                initialValue++;
+            int sqr = i * i;
+            if (sqr <= upLimit && sqr >= lowLimit) {
+                quantityRoots++;
 
             }
         }
-        return initialValue;
+        return quantityRoots;
     }
 }

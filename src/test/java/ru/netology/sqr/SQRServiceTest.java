@@ -1,6 +1,7 @@
 package ru.netology.sqr;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class SQRServiceTest {
 
@@ -10,11 +11,12 @@ class SQRServiceTest {
 
         int lowLimit = 200;
         int upLimit = 300;
-        int initialValue = 0;
+        int expected = 3;
 
+        int quantityRoots = sqrService.countinQuantitySqr(lowLimit, upLimit);
 
-        int numberSQR = sqrService.numderOfSqr(lowLimit, upLimit, initialValue);
+        assertEquals(expected, quantityRoots);
 
-        System.out.println(numberSQR);
+        System.out.println(quantityRoots);
     }
 }
